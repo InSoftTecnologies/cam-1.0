@@ -1,0 +1,13 @@
+#login{
+    border-radius: 20px;
+    text-align: center;
+    height: 500px;
+    width: 700px;
+    margin-top: 50px;;
+}
+
+#login p{
+    
+    font-family: Berlin Sans FB;
+    font-size: 30px;
+}
