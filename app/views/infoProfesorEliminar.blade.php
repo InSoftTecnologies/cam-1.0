@@ -51,31 +51,31 @@
                                     <div class="form-group">
                                         <label for="id" class="col-md-4 control-label">ID</label>
                                         <div class="col-md-8">
-                                            <input type="text" readonly="true" class="form-control floating-label" id="id" name="id" placeholder="ID del profesor">
+                                            <input type="text" readonly="true" class="form-control floating-label" id="id" name="id" placeholder="ID del profesor" value="{{$profe->id}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="curp" class="col-md-4 control-label">CURP</label>
                                         <div class="col-md-8">
-                                            <input type="text" readonly="true" class="form-control floating-label" id="curp" name="curp" placeholder="CURP del profesor">
+                                            <input type="text" readonly="true" class="form-control floating-label" id="curp" name="curp" placeholder="CURP del profesor" value="{{$profe->curp}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="nombre" class="col-md-4 control-label">Nombre</label>
                                         <div class="col-md-8">
-                                            <input type="text" readonly="true" class="form-control floating-label" id="nombre" name="nombre" placeholder="Nombre(s) del profesor">
+                                            <input type="text" readonly="true" class="form-control floating-label" id="nombre" name="nombre" placeholder="Nombre(s) del profesor" value="{{$profe->nombre}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="ap_pa" class="col-md-4 control-label">Apellido paterno</label>
                                         <div class="col-md-8">
-                                            <input type="text" readonly="true" class="form-control floating-label" id="ap_pa" name="ap_pa" placeholder="Apellido paterno del profesor">
+                                            <input type="text" readonly="true" class="form-control floating-label" id="ap_pa" name="ap_pa" placeholder="Apellido paterno del profesor" value="{{$profe->apellido_paterno}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="ap_ma" class="col-md-4 control-label">Apellido materno</label>
                                         <div class="col-md-8">
-                                            <input type="text" readonly="true" class="form-control floating-label" id="ap_ma" name="ap_ma" placeholder="Apellido materno del profesor">
+                                            <input type="text" readonly="true" class="form-control floating-label" id="ap_ma" name="ap_ma" placeholder="Apellido materno del profesor" value="apellido_materno">
                                         </div>
                                     </div>
                                 </div>
@@ -84,19 +84,19 @@
                                     <div class="form-group">
                                         <label for="tel_par" class="col-md-4 control-label">Teléfono particular</label>
                                         <div class="col-md-8">
-                                            <input type="tel" readonly="true" class="form-control floating-label" id="tel_par" name="tel_par" placeholder="Teléfono particular del profesor">
+                                            <input type="tel" readonly="true" class="form-control floating-label" id="tel_par" name="tel_par" placeholder="Teléfono particular del profesor" value="tel_par">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="tel_cel" class="col-md-4 control-label">Teléfono celular</label>
                                         <div class="col-md-8">
-                                            <input type="tel" class="form-control floating-label" id="tel_cel" name="tel_cel" placeholder="Teléfono celular del profesor">
+                                            <input type="tel" class="form-control floating-label" id="tel_cel" name="tel_cel" placeholder="Teléfono celular del profesor" value="tel_cel">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="email" class="col-md-4 control-label">Correo electrónico</label>
                                         <div class="col-md-8">
-                                            <input type="email" readonly="true" class="form-control floating-label" id="email" name="email" placeholder="Correo electrónico del profesor ">
+                                            <input type="email" readonly="true" class="form-control floating-label" id="email" name="email" placeholder="Correo electrónico del profesor " value="{{$profe->email}}">
                                         </div>
                                     </div>
                                 </div>
@@ -110,19 +110,19 @@
                                     <div class="form-group">
                                         <label for="calle" class="col-md-4 control-label">Calle</label>
                                         <div class="col-md-8">
-                                            <input type="email" readonly="true" class="form-control floating-label" id="calle" name="calle" placeholder="Calle del domicilio actual">
+                                            <input type="email" readonly="true" class="form-control floating-label" id="calle" name="calle" placeholder="Calle del domicilio actual" value="{{$profe->direccion->calle}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="numero" class="col-md-4 control-label">Numero</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="numero" name="numero" placeholder="Número del domicilio ">
+                                            <input type="text" class="form-control floating-label" id="numero" name="numero" placeholder="Número del domicilio " value="{{$profe->direccion->numero}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="colonia" class="col-md-4 control-label">Colonia</label>
                                         <div class="col-md-8">
-                                            <input type="text" readonly="true" class="form-control floating-label" id="colonia" name="colonia" placeholder="Colonia donde reside">
+                                            <input type="text" readonly="true" class="form-control floating-label" id="colonia" name="colonia" placeholder="Colonia donde reside" value="{{$profe->direccion->colonia}}">
                                         </div>
                                     </div>    
                                 </div>
@@ -131,13 +131,13 @@
                                     <div class="form-group">
                                         <label for="cod_pos" class="col-md-4 control-label">Código postal</label>
                                         <div class="col-md-8">
-                                            <input type="number" readonly="true" class="form-control floating-label" id="cod_pos" name="cod_pos" placeholder="Código postal de la zona">
+                                            <input type="number" readonly="true" class="form-control floating-label" id="cod_pos" name="cod_pos" placeholder="Código postal de la zona" value="codigo_postal">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="estado" class="col-md-4 control-label">Estado</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="estado" name="estado" placeholder="Estado donde reside">
+                                            <input type="text" class="form-control floating-label" id="estado" name="estado" placeholder="Estado donde reside" value="{{$profe->direccion->estado}}">
                                         </div>
                                     </div>
                                 </div>
