@@ -2,7 +2,7 @@ $(document).on("ready", init);
 
 function init(){
     
-    $formulario=$("#formEditProfesor");
+    $formulario=$("#formEdiProfesor");
     
     $formulario.validate({
         rules:{
@@ -55,7 +55,7 @@ function init(){
         }
     });
     
-    $("#btnEditarProfesor").click(function(){
+    $("#btnRegistrarProfesor").click(function(){
         
         if($formulario.valid())
         {

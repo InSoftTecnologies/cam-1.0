@@ -42,7 +42,7 @@
                     <form class="form-horizontal" action="/eliminarProfesor" method="post" id="formEliProfesor">
                         
                         <!--<fieldset>-->
-                            <legend>Información personal del profesor</legend>
+                            <legend>Información personal</legend>
                             
                             <div class="row">
                                 

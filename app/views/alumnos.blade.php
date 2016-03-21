@@ -51,19 +51,6 @@
                         </center>
                     </div>
                 </div>
-                
-                <div class="row">
-                    <div>
-                        <center>
-                            <a href="/directorioAlumnos" class="btn btn-primary" role="button">
-                            <img src="{{asset('packages/media/User Manual-48.png')}}" height="35px"> Ver directorio</a>
-                            <a href="#" class="btn btn-primary" role="button">
-                            <img src="{{asset('packages/media/PDF 2-48.png')}}" height="35px"> Descargar directorio en formato PDF</a>
-                            <a href="#" class="btn btn-primary" role="button">
-                            <img src="{{asset('packages/media/MS Excel-48.png')}}" height="35px"> Descargar directorio en formato Excel</a>
-                        </center>
-                    </div>
-                </div>
 
             </div>
 

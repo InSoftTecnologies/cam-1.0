@@ -31,22 +31,13 @@ function init(){
             calle:{
                 required:true
             },
-            numero_int:{
-                required:true
-            },
-            numero_ext:{
-                required:true
-            },
             numero:{
                 required:true
             },
             colonia:{
                 required:true
             },
-            cod_post:{
-                required:true
-            },
-            municipio:{
+            cod_pos:{
                 required:true
             },
             estado:{
@@ -58,10 +49,7 @@ function init(){
             funcion:{
                 required:true
             },
-            taller:{
-                required:true
-            },
-            situacion:{
+            situ:{
                 required:true
             }
         }
