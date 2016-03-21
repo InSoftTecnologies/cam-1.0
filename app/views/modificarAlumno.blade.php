@@ -26,14 +26,14 @@
                 </div>
             </div>
                    
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-lg-12">
                     <div class="alert alert-info alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <i class="fa fa-info-circle"></i> <strong>Usted está apunto de modificar la información de un alumno exístete en el sistema</strong>
+                        <i class="fa fa-info-circle"></i> <strong>Debes Completar Todos Los Cambios Para Registrar Un Nuevo Profesor</strong>
                     </div>
                 </div>
-            </div>
+            </div>-->
             
             <div class="row">
                 

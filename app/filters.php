@@ -43,7 +43,7 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('login');
+			return Redirect::guest('acceso');
 		}
 	}
 });
@@ -87,4 +87,10 @@ Route::filter('csrf', function()
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}
+});
+
+Route::filter('maestro',function(){
+    if(Auth::user()->personal->administrativo!=1){
+        return Redirect::to('/profesores');
+    }
 });

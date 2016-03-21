@@ -43,8 +43,7 @@
                         
                         <!--<fieldset>-->
                             <legend>
-                            <img src="{{asset('packages/media/Sort Right-48.png')}}" height="35px">Formulario de registro</legend>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<img src="{{asset('packages/media/Forward-48.png')}}" height="35px">Información personal
+                            <img src="{{asset('packages/media/Sort Right-48.png')}}" height="35px">Información personal</legend>
                             
                             <div class="row">
                                 
@@ -52,25 +51,25 @@
                                     <div class="form-group">
                                         <label for="curp" class="col-md-4 control-label">CURP</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="curp" name="curp" placeholder="CURP del alumno" maxlength="18">
+                                            <input type="text" class="form-control floating-label" id="curp" name="curp" placeholder="CURP del profesor">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="nombre" class="col-md-4 control-label">Nombre</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="nombre" name="nombre" placeholder="Nombre(s) del alumno" maxlength="30">
+                                            <input type="text" class="form-control floating-label" id="nombre" name="nombre" placeholder="Nombre(s) del alumno">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="ap_pa" class="col-md-4 control-label">Apellido paterno</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="ap_pa" name="ap_pa" placeholder="Apellido paterno del alumno" maxlength="15">
+                                            <input type="text" class="form-control floating-label" id="ap_pa" name="ap_pa" placeholder="Apellido paterno del alumno">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="ap_ma" class="col-md-4 control-label">Apellido materno</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="ap_ma" name="ap_ma" placeholder="Apellido materno del alumno" maxlength="15">
+                                            <input type="text" class="form-control floating-label" id="ap_ma" name="ap_ma" placeholder="Apellido materno del profesor">
                                         </div>
                                     </div>
                                 </div>
@@ -81,15 +80,9 @@
                                         <div class="col-md-8">
                                             <select class="form-control" id="sexo" name="sexo">
                                                 <option selected disabled>Sexo del alumno</option>
-                                                <option value="Masculino">Masculino</option>
-                                                <option value="Femenino">Femenino</option>
+                                                <option value="masculino">Masculino</option>
+                                                <option value="femenino">Femenino</option>
                                             </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="fech_naci" class="col-md-4 control-label">Fecha de nacimiento</label>
-                                        <div class="col-md-8">
-                                            <input type="date" class="form-control" id="fech_naci" name="fech_naci">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -108,9 +101,15 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="img_alumno" class="col-md-4 control-label">Imagen</label>
+                                        <label for="tel_cel" class="col-md-4 control-label">Teléfono celular</label>
                                         <div class="col-md-8">
-                                            <input type="file" class="form-control" id="img_alumno" name="img_alumno">
+                                            <input type="tel" class="form-control floating-label" id="tel_cel" name="tel_cel" placeholder="Teléfono celular del alumno">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tel_emer" class="col-md-4 control-label">Teléfono de emergencia</label>
+                                        <div class="col-md-8">
+                                            <input type="tel" class="form-control floating-label" id="tel_emer" name="tel_emer" placeholder="En caso de emergencia llamar al teléfono">
                                         </div>
                                     </div>
                                 </div>
@@ -130,25 +129,19 @@
                                     <div class="form-group">
                                         <label for="nombre_tr" class="col-md-4 control-label">Nombre</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="nombre_tr" name="nombre_tr" placeholder="Nombre(s) del tutor" maxlength="30">
+                                            <input type="text" class="form-control floating-label" id="nombre_tr" name="nombre_tr" placeholder="Nombre(s) del tutor">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="ap_pa_tr" class="col-md-4 control-label">Apellido paterno</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="ap_pa_tr" name="ap_pa_tr" placeholder="Apellido paterno del tutor" maxlength="15">
+                                            <input type="text" class="form-control floating-label" id="ap_pa_tr" name="ap_pa_tr" placeholder="Apellido paterno del tutor">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="ap_ma_tr" class="col-md-4 control-label">Apellido materno</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="ap_ma_tr" name="ap_ma_tr" placeholder="Apellido materno del tutor" maxlength="15">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email_tr" class="col-md-4 control-label">Correo electrónico</label>
-                                        <div class="col-md-8">
-                                            <input type="email" class="form-control floating-label" id="email_tr" name="email_tr" placeholder="Correo electrónico del tutor" maxlength="50">
+                                            <input type="text" class="form-control floating-label" id="ap_ma_tr" name="ap_ma_tr" placeholder="Apellido materno del tutor">
                                         </div>
                                     </div>
                                 </div>
@@ -157,25 +150,13 @@
                                     <div class="form-group">
                                         <label for="tel_par_tr" class="col-md-4 control-label">Teléfono particular</label>
                                         <div class="col-md-8">
-                                            <input type="tel" class="form-control floating-label" id="tel_par_tr" name="tel_par_tr" placeholder="Teléfono particular del tutor" maxlength="10">
+                                            <input type="tel" class="form-control floating-label" id="tel_par_tr" name="tel_par_tr" placeholder="Teléfono particular del tutor">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="tel_cel_tr" class="col-md-4 control-label">Teléfono celular</label>
                                         <div class="col-md-8">
-                                            <input type="tel" class="form-control floating-label" id="tel_cel_tr" name="tel_cel_tr" placeholder="Teléfono celular del tutor" maxlength="13">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="tel_trabajo" class="col-md-4 control-label">Teléfono de trabajo</label>
-                                        <div class="col-md-8">
-                                            <input type="tel" class="form-control floating-label" id="tel_trabajo" name="tel_trabajo" placeholder="Teléfono del lugar donde labora" maxlength="13">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="comentarios" class="col-md-4 control-label">Observaciones</label>
-                                        <div class="col-md-8">
-                                            <textarea id="comentarios" placeholder="Observaciones adicionales" name="comentarios" class="form-control floating-label" rows=2></textarea>
+                                            <input type="tel" class="form-control floating-label" id="tel_cel_tr" name="tel_cel_tr" placeholder="Teléfono celular del tutor">
                                         </div>
                                     </div>
                                 </div>
@@ -187,48 +168,36 @@
                                 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="calle" class="col-md-4 control-label">Calle</label>
+                                        <label for="calle_tr" class="col-md-4 control-label">Calle</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="calle" name="calle" placeholder="Calle donde se ubica el domicilio" maxlength="35">
+                                            <input type="text" class="form-control floating-label" id="calle_tr" name="calle_tr" placeholder="Calle del domicilio actual del tutor">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="numero_ext" class="col-md-4 control-label">Numero interior</label>
+                                        <label for="numero_tr" class="col-md-4 control-label">Numero</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="numero_ext" name="numero_ext" placeholder="Número interior del domicilio" maxlength="7">
+                                            <input type="text" class="form-control floating-label" id="numero_tr" name="numero_tr" placeholder="Número del domicilio">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="numero_int" class="col-md-4 control-label">Numero exterior</label>
+                                        <label for="colonia_tr" class="col-md-4 control-label">Colonia</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="numero_int" name="numero_int" placeholder="Número exterior del domicilio" maxlength="7">
+                                            <input type="text" class="form-control floating-label" id="colonia_tr" name="colonia_tr" placeholder="Colonia donde reside el tutor">
                                         </div>
                                     </div>    
                                 </div>
                                 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="colonia" class="col-md-4 control-label">Colonia</label>
+                                        <label for="cod_pos_tr" class="col-md-4 control-label">Código postal</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="colonia" name="colonia" placeholder="Colonia donde se ubica el domicilio" maxlength="25">
+                                            <input type="number" class="form-control floating-label" id="cod_pos_tr" name="cod_pos_tr" placeholder="Código postal de la zona donde reside el tutor">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="cod_post" class="col-md-4 control-label">Código postal</label>
+                                        <label for="estado_tr" class="col-md-4 control-label">Estado</label>
                                         <div class="col-md-8">
-                                            <input type="number" class="form-control floating-label" id="cod_post" name="cod_post" placeholder="Código postal de la zona donde se ubica el domicilio" maxlength="5">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="municipio" class="col-md-4 control-label">Municipio</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="municipio" name="municipio" placeholder="Municipio de residencia" maxlength="15">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="estado" class="col-md-4 control-label">Estado</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="estado" name="estado" placeholder="Estado de residencia" maxlength="15">
+                                            <input type="text" class="form-control floating-label" id="estado_tr" name="estado_tr" placeholder="Estado donde reside el tutor">
                                         </div>
                                     </div>
                                 </div>
@@ -245,44 +214,49 @@
                                 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="discapacidad" class="col-md-4 control-label">Discapacidad:</label>
+                                        <label for="disc" class="col-md-4 control-label">Discapacidad:</label>
                                         <div class="col-md-8">
-                                            <select class="form-control" id="discapacidad" name="discapacidad">
+                                            <select class="form-control" id="disc" name="disc">
                                                 <option selected disabled>Discapacidad que padece el alumno</option>
-                                                <option value="Aptitud sobresaliente artística">Aptitud sobresaliente artística</option>
-                                                <option value="Aptitud sobresaliente creativa">Aptitud sobresaliente creativa</option>
-                                                <option value="Aptitud sobresaliente intelectual">Aptitud sobresaliente intelectual</option>
-                                                <option value="Aptitud sobresaliente psicomotriz">Aptitud sobresaliente psicomotriz</option>
-                                                <option value="Aptitud sobresaliente socioafectiva">Aptitud sobresaliente socioafectiva</option>
-                                                <option value="Baja visión ">Baja visión </option>
-                                                <option value="Ceguera">Ceguera</option>
-                                                <option value="Discapacidad intelectual">Discapacidad intelectual</option>
-                                                <option value="Discapacidad mental o psocosocial">Discapacidad mental o psocosocial</option>
-                                                <option value="Discapacidad motriz">Discapacidad motriz</option>
-                                                <option value="Discapacidad múltiple">Discapacidad múltiple</option>
-                                                <option value="Hipoacusia">Hipoacusia</option>
-                                                <option value="Problema de lenguaje">Problema de lenguaje</option>
-                                                <option value="Problemas de aprendizaje">Problemas de aprendizaje</option>
-                                                <option value="Problemas de conducta">Problemas de conducta</option>
-                                                <option value="Problemas de salud">Problemas de salud</option>
-                                                <option value="Sin especificar">Sin especificar</option>
-                                                <option value="Sordera">Sordera</option>
-                                                <option value="Sordoceguera">Sordoceguera</option>
-                                                <option value="Trastorno de espectro autista">Trastorno de espectro autista</option>
-                                                <option value="Trastorno por déficit de atención e hiperactividad">Trastorno por déficit de atención e hiperactividad</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
+                                                <option value="">Inserte discapacidad aquí</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="peso" class="col-md-4 control-label">Peso en KG</label>
                                         <div class="col-md-8">
-                                            <input type="number" class="form-control floating-label" id="peso" name="peso" placeholder="Peso del alumno" step="0.01" min="0">
+                                            <input type="text" class="form-control floating-label" id="peso" name="peso" placeholder="Peso del alumno">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="talla" class="col-md-4 control-label">Talla</label>
                                         <div class="col-md-8">
                                             <input type="text" class="form-control floating-label" id="talla" name="talla" placeholder="Talla del alumno">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="med_apr" class="col-md-4 control-label">Medicamentos aprobados</label>
+                                        <div class="col-md-8">
+                                            <textarea id="med_apr" placeholder="Medicamentos y dosis aprobada" name="med_apr" class="form-control floating-label" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="med_res" class="col-md-4 control-label">Medicamentos restringidos</label>
+                                        <div class="col-md-8">
+                                            <textarea id="med_res" placeholder="Medicamentos que no se deben administrar " name="med_res" class="form-control floating-label" rows="4"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -316,24 +290,12 @@
                                             <input type="tel" class="form-control floating-label" id="num_afi" name="num_afi" placeholder="Numero de afiliación del servicio médico">
                                         </div>
                                     </div>
-                                </div>
-                                
-                            </div>
-                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;<img src="{{asset('packages/media/Forward-48.png')}}" height="35px">Indicaciones adicionales
-                            <div class="row">
-                                
-                                <div class="col-md-6">
-                                    <div class="checkbox">
-                                        <label for="alergias" class="col-md-5"><input type="checkbox" id="alergias" name="alergias"> Alergias</label>
-                                        <label for="rest_fis" class="col-md-5"><input type="checkbox" id="rest_fis" name="rest_fis"> Restricciones físicas</label>
-                                        <label for="cirugias" class="col-md-5"><input type="checkbox" id="cirugias" name="cirugias"> Cirugías</label>
-                                        <label for="med" class="col-md-5"><input type="checkbox" id="med" name="med"> Medicamentos controlados</label>
+                                    <div class="form-group">
+                                        <label for="res_fis" class="col-md-4 control-label">Restricciones físicas</label>
+                                        <div class="col-md-8">
+                                            <textarea id="res_fis" placeholder="Restricciones físicas del alumno" name="res_fis" class="form-control floating-label" rows="4"></textarea>
+                                        </div>
                                     </div>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <!--Formularios para cada checkbox en tiempo de ejecucion-->
                                 </div>
                                 
                             </div>
@@ -363,11 +325,11 @@
 
 @section('js')
     {{HTML::script('/packages/js/registrarAlumno.js')}}
-    <!--<script>
+    <script>
         var delay = alertify.get('notifier','delay');
         alertify.set('notifier','position', 'top-right');
         alertify.set('notifier','delay', 3);
         alertify.success('Todos los campos son obligatorios!');
         alertify.set('notifier','delay', delay);
-    </script>-->
+    </script>
 @stop

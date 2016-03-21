@@ -121,7 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+        'Maatwebsite\Excel\ExcelServiceProvider',
+        'Thujohn\Pdf\PdfServiceProvider',
 	),
 
 	/*
@@ -188,12 +189,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
-<<<<<<< HEAD
-=======
         'Excel'           => 'Maatwebsite\Excel\Facades\Excel',
         'PDF'             => 'Thujohn\Pdf\PdfFacade',
->>>>>>> parent of 0116034... cam V1.1
 	),
 
 );

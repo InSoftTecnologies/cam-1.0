@@ -42,8 +42,6 @@
                 <div class="row">
                     <div>
                         <center>
-                            <a href="/directorioProfesores" class="btn btn-primary" role="button">
-                            <img src="{{asset('packages/media/User Manual-48.png')}}" height="30px"> Ver directorio</a>
                             <a href="/registrarUsuario" class="btn btn-primary" role="button">
                             <img src="{{asset('/packages/media/Plus-48.png')}}" height="30px"> Registrar usuario</a>
                             <a href="/modificarUsuario" class="btn btn-primary" role="button">

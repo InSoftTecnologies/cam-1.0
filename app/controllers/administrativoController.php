@@ -1,12 +1,16 @@
 <?php
 
 class administrativoController extends BaseController{
+    public function getDatos()
+    {
+        return Auth::user()->personal;
+    }
     
     public function inicio()
     {
         if(Request::method()=="GET")
         {
-            return View::make('administrativo');
+            return View::make('administrativo',$this->getDatos());
         }
     }
     
@@ -14,7 +18,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('profesores');
+            return View::make('profesores',$this->getDatos());
         }
     }
     
@@ -22,7 +26,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('registrarProfesor');
+            return View::make('registrarProfesor',$this->getDatos());
         }
         else
         {
@@ -43,12 +47,12 @@ class administrativoController extends BaseController{
             'calle'=>'required',
             'numero'=>'required',
             'colonia'=>'required',
-            'cod_post'=>'required',
+            'cod_pos'=>'required',
             'estado'=>'required',
             'cat_fun'=>'required',
             'funcion'=>'required',
-            'taller'=>'required',
-            'situacion'=>'required',
+            'situ'=>'required',
+            'comentarios'=>'required',
             'imagen'=>'required'
         );
         
@@ -59,7 +63,7 @@ class administrativoController extends BaseController{
         else
         {
             $file = Input::file('imagen');
-            $destino = public_path(). '/media/imagenes/'; /*definir ruta especifica*/
+            $destino = public_path(). '/media/imagenes/';
             $url_imagen = $file->getClientOriginalName();
             $subir = $file->move($destino,$file->getClientOriginalName());
             
@@ -74,12 +78,12 @@ class administrativoController extends BaseController{
             $profesor-> = Input::get('calle');
             $profesor-> = Input::get('numero');
             $profesor-> = Input::get('colonia');
-            $profesor-> = Input::get('cod_post');
+            $profesor-> = Input::get('cod_pos');
             $profesor-> = Input::get('estado');
             $profesor-> = Input::get('cat_fun');
             $profesor-> = Input::get('funcion');
-            $profesor-> = Input::get('taller');
-            $profesor-> = Input::get('situacion');
+            $profesor-> = Input::get('situ');
+            $profesor-> = Input::get('comentarios');
             $profesor->imagen = $url_imagen;
             $profesor->save();*/
             
@@ -91,7 +95,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('modificarProfesor');
+            return View::make('modificarProfesor',$this->getDatos());
         }
         else
         {
@@ -108,7 +112,7 @@ class administrativoController extends BaseController{
         $profesor = DB::table('')->where("nombre", "=", "$nombre")->where("apellido_paterno", "=", "ap_pa")->where("apellido_materno", "=", "ap_ma")->get();
         if(empty($profesor))
         {
-            return Redirect::to('/profesores')->with('status', 'registro_no_encontrado'); /*variable que activara a notify*/
+            return Redirect::to('/profesores')->with('status', 'registro_no_encontrado');
         }
         else
         {   
@@ -121,7 +125,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('infoProfesorModificar');
+            return View::make('infoProfesorModificar',$this->getDatos());
         }
         else
         {
@@ -131,6 +135,7 @@ class administrativoController extends BaseController{
     
     public function editarProfesor()
     {
+        
         $rules = array(
             
             'curp' => 'required',
@@ -175,7 +180,7 @@ class administrativoController extends BaseController{
         $profesor->  = Input::get('situ');
         $profesor->Save();*/
         
-        return Redirect::to('/directorioProfesores')->with('status', 'profesor_editado'); /*variable que activara a notify*/
+        return Redirect::to('/directorioProfesores')->with('status', 'profesor_editado');
         
     }
     
@@ -183,7 +188,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('eliminarProfesor');
+            return View::make('eliminarProfesor',$this->getDatos());
         }
         else
         {
@@ -200,7 +205,7 @@ class administrativoController extends BaseController{
         $profesor = DB::table('')->where("nombre", "=", "$nombre")->where("apellido_paterno", "=", "ap_pa")->where("apellido_materno", "=", "ap_ma")->get();
         if(empty($profesor))
         {
-            return Redirect::to('/profesores')->with('status', 'registro_no_encontrado'); /*variable que activara a notify*/
+            return Redirect::to('/profesores')->with('status', 'registro_no_encontrado');
         }
         else
         {   
@@ -213,7 +218,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('infoProfesorEliminar');
+            return View::make('infoProfesorEliminar',$this->getDatos());
         }
         else
         {
@@ -226,43 +231,15 @@ class administrativoController extends BaseController{
         
         
         
-        return Redirect::to('/directorioProfesores')->with('status', 'profesor_eliminado'); /*variable que activara a notify*/
+        return Redirect::to('/directorioProfesores')->with('status', 'profesor_eliminado');
         
     }
-    
-    /*Ejemplo
-    public function eliminarPelicula()
-	{
-        $pelicula = Input::get('nombre');
-        if($stock = DB::table('stocks')->where("nombre", "=", "$pelicula")->get())
-        {
-            $stock = DB::table('stocks')->where("nombre", "=", "$pelicula");
-            $catalogo = DB::table('catalogos')->where("nombre", "=", "$pelicula");
-            $stock->delete();
-            $catalogo->delete();
-            return Redirect::to('peliculas')->with('status', 'registro_eliminado');
-        }
-        else
-        {
-            $pelicula = Input::get('nombre');
-            if($catalogo = DB::table('catalogos')->where("nombre", "=", "$pelicula")->get())
-            {
-                $catalogo = DB::table('catalogos')->where("nombre", "=", "$pelicula");
-                $catalogo->delete();
-                return Redirect::to('peliculas')->with('status', 'registro_eliminado');
-            }
-            else
-            {
-                return Redirect::to('peliculas')->with('status', 'registro_no_encontrado');
-            }
-        }
-	}*/
     
     public function alumnos()
     {
         if(Request::method()=="GET")
         {
-            return View::make('alumnos');
+            return View::make('alumnos',$this->getDatos());
         }
     }
     
@@ -270,7 +247,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('registrarAlumno');
+            return View::make('registrarAlumno',$this->getDatos());
         }
         else
         {
@@ -361,7 +338,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('modificarAlumno');
+            return View::make('modificarAlumno',$this->getDatos());
         }
         else
         {
@@ -391,7 +368,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('eliminarAlumno');
+            return View::make('eliminarAlumno',$this->getDatos());
         }
     }
     
@@ -399,7 +376,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('usuarios');
+            return View::make('usuarios',$this->getDatos());
         }
     }
     
@@ -407,7 +384,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('registrarUsuario');
+            return View::make('registrarUsuario',$this->getDatos());
         }
     }
     
@@ -415,7 +392,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('modificarUsuario');
+            return View::make('modificarUsuario',$this->getDatos());
         }
     }
     
@@ -423,7 +400,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('eliminarUsuario');
+            return View::make('eliminarUsuario',$this->getDatos());
         }
     }
     
@@ -431,7 +408,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('inventario');
+            return View::make('inventario',$this->getDatos());
         }
     }
     
@@ -439,7 +416,7 @@ class administrativoController extends BaseController{
     {
         if(Request::method()=="GET")
         {
-            return View::make('directorios');
+            return View::make('directorios',$this->getDatos());
         }
     }
     

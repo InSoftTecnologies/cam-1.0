@@ -34,7 +34,7 @@
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i> <strong>En esta sección puede gestionar al personal docente existente en el sistema</strong>
+                            <i class="fa fa-info-circle"></i> <strong>En Esta Sección Puede Gestionar Al Personal Docente</strong>
                         </div>
                     </div>
                 </div>

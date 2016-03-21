@@ -32,6 +32,18 @@ class inicioController extends BaseController{
         {
             return View::make('login');
         }
+        else
+        {
+            
+            if(Auth::attempt(Input::all()))
+            {
+                return Redirect::intended('/administrativo');
+            }
+            else
+            {
+                return View::make('login')->with('status','fallo');
+            }
+        }
     }
     
     public function registrarse()
@@ -41,5 +53,9 @@ class inicioController extends BaseController{
             return View::make('registrarse');
         }
     }
-    
+    public function salir()
+    {
+        Auth::logout();
+        return Redirect::to('/');
+    }
 }

@@ -43,7 +43,7 @@
                         
                         <!--<fieldset>-->
                             <legend>
-                            <img src="{{asset('packages/media/Sort Right-48.png')}}" height="35px">Formulario de registro</legend>
+                            <img src="{{asset('packages/media/Sort Right-48.png')}}" height="35px">Información personal</legend>
                             &nbsp;&nbsp;&nbsp;&nbsp;<img src="{{asset('packages/media/Forward-48.png')}}" height="35px">Información personal
                             <div class="row">
                                 
@@ -104,51 +104,39 @@
                                     <div class="form-group">
                                         <label for="calle" class="col-md-4 control-label">Calle</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="calle" name="calle" placeholder="Calle donde se ubica el domicilio" maxlength="35">
+                                            <input type="email" class="form-control floating-label" id="calle" name="calle" placeholder="Calle del domicilio actual">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="numero_ext" class="col-md-4 control-label">Numero interior</label>
+                                        <label for="numero" class="col-md-4 control-label">Numero</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="numero_ext" name="numero_ext" placeholder="Número interior del domicilio" maxlength="7">
+                                            <input type="text" class="form-control floating-label" id="numero" name="numero" placeholder="Número del domicilio ">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="numero_int" class="col-md-4 control-label">Numero exterior</label>
+                                        <label for="colonia" class="col-md-4 control-label">Colonia</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="numero_int" name="numero_int" placeholder="Número exterior del domicilio" maxlength="7">
+                                            <input type="text" class="form-control floating-label" id="colonia" name="colonia" placeholder="Colonia donde reside">
                                         </div>
                                     </div>    
                                 </div>
                                 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="colonia" class="col-md-4 control-label">Colonia</label>
+                                        <label for="cod_pos" class="col-md-4 control-label">Código postal</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="colonia" name="colonia" placeholder="Colonia donde se ubica el domicilio" maxlength="25">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="cod_post" class="col-md-4 control-label">Código postal</label>
-                                        <div class="col-md-8">
-                                            <input type="number" class="form-control floating-label" id="cod_post" name="cod_post" placeholder="Código postal de la zona donde se ubica el domicilio" maxlength="5">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="municipio" class="col-md-4 control-label">Municipio</label>
-                                        <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="municipio" name="municipio" placeholder="Municipio de residencia" maxlength="15">
+                                            <input type="number" class="form-control floating-label" id="cod_pos" name="cod_pos" placeholder="Código postal de la zona">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="estado" class="col-md-4 control-label">Estado</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control floating-label" id="estado" name="estado" placeholder="Estado de residencia" maxlength="15">
+                                            <input type="text" class="form-control floating-label" id="estado" name="estado" placeholder="Estado donde reside">
                                         </div>
                                     </div>
                                 </div>
                                 
-                            </div>
+                            </div><br>
                             
                         <!--</fieldset>-->
                         
@@ -160,47 +148,21 @@
                                 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="cat_fun" class="col-md-4 control-label">Categoría función:</label>
+                                        <label for="cat_fun" class="col-md-4 control-label">Categoría función</label>
                                         <div class="col-md-8">
-                                            <select class="form-control" id="cat_fun" name="cat_fun">
-                                                <option selected disabled>Seleccione la categoría del profesor</option>
-                                                <option value="Apoyo administrativo">Apoyo administrativo</option>
-                                                <option value="Directivos">Directivos</option>
-                                                <option value="Docentes">Docentes</option>
-                                                <option value="Equipo paradocente">Equipo paradocente</option>
-                                            </select>
+                                            <input type="text" class="form-control floating-label" id="cat_fun" name="cat_fun" placeholder="Categoría del profesor">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="funcion" class="col-md-4 control-label">Función:</label>
+                                        <label for="funcion" class="col-md-4 control-label">Función</label>
                                         <div class="col-md-8">
-                                            <select class="form-control" id="funcion" name="funcion">
-                                                <option selected disabled>Seleccione la función del profesor</option>
-                                            </select>
+                                            <input type="text" class="form-control floating-label" id="funcion" name="funcion" placeholder="Función del profesor">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="taller" class="col-md-4 control-label">Taller:</label>
+                                        <label for="situ" class="col-md-4 control-label">Situación:</label>
                                         <div class="col-md-8">
-                                            <select class="form-control" id="taller" name="taller">
-                                                <option selected disabled>Seleccione el taller asignado</option>
-                                                <option value="Belleza">Belleza</option>
-                                                <option value="Carpintería">Carpintería</option>
-                                                <option value="Cocina">Cocina</option>
-                                                <option value="Corte y confección">Corte y confección</option>
-                                                <option value="Mantenimiento general y trapeadores">Mantenimiento general y trapeadores</option>
-                                                <option value="Serigrafía y macetas">Serigrafía y macetas</option>
-                                                <option value="Vida diaria">Vida diaria</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                   <div class="form-group">
-                                        <label for="situacion" class="col-md-4 control-label">Situación:</label>
-                                        <div class="col-md-8">
-                                            <select class="form-control" id="situacion" name="situacion">
+                                            <select class="form-control" id="situ" name="situ">
                                                 <option selected disabled>Situación actual</option>
                                                 <option value="Activo">Activo</option>
                                                 <option value="Acuerdo presidencial">Acuerdo presidencial</option>
@@ -217,10 +179,13 @@
                                             </select>
                                         </div>
                                     </div>
+                                </div>
+                                
+                                <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="comentarios" class="col-md-4 control-label">Comentarios de la situación actual</label>
+                                        <label for="comentarios" class="col-md-4 control-label">Comentarios de la situación</label>
                                         <div class="col-md-8">
-                                            <textarea id="comentarios" placeholder="Comentarios respecto a situación actual" name="comentarios" class="form-control floating-label" rows=4></textarea>
+                                            <textarea id="comentarios" placeholder="Comentarios respecto a situación actual" name="comentarios" class="form-control floating-label" rows="7"></textarea>
                                         </div>
                                     </div>
                                 </div>

@@ -21,12 +21,6 @@ function init(){
             sexo:{
                 required:true
             },
-            fech_naci:{
-                required:true
-            },
-            taller:{
-                required:true
-            },
             taller:{
                 required:true
             },
@@ -45,43 +39,60 @@ function init(){
             ap_ma_tr:{
                 required:true
             },
+            tel_par_tr:{
+                required:true
+            },
             tel_cel_tr:{
                 required:true
             },
-            calle:{
+            calle_tr:{
                 required:true
             },
-            numero_ext:{
+            numero_tr:{
                 required:true
             },
-            numero_int:{
+            colonia_tr:{
                 required:true
             },
-            numero:{
+            cod_pos_tr:{
                 required:true
             },
-            colonia:{
+            estado_tr:{
                 required:true
             },
-            cod_post:{
+            disc:{
                 required:true
-            },
-            municipio:{
-                required:true
-            },
-            estado:{
-                required:true
-            },
-            discapacidad:{
-                required:true
-            },
+            }
+            ,
             peso:{
                 required:true
-            },
+            }
+            ,
             talla:{
                 required:true
-            },
+            }
+            ,
+            med_apr:{
+                required:true
+            }
+            ,
+            med_res:{
+                required:true
+            }
+            ,
             tip_san:{
+                required:true
+            }
+            ,
+            serv_medic:{
+                required:true
+            }
+            ,
+            num_afi:{
+                required:true
+            }
+            ,
+            res_fis:{
                 required:true
             }
         }
