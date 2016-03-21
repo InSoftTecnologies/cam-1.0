@@ -189,6 +189,11 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
+<<<<<<< HEAD
+=======
+        'Excel'           => 'Maatwebsite\Excel\Facades\Excel',
+        'PDF'             => 'Thujohn\Pdf\PdfFacade',
+>>>>>>> parent of 0116034... cam V1.1
 	),
 
 );
